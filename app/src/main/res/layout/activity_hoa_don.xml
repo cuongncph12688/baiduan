@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".atvivit2.HoaDonActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mã hoá đơn"
+        android:id="@+id/edMaHoaDon"
+        />
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="5">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="DD-MM-YYYY"
+        android:id="@+id/edNgayMua"
+        android:layout_weight="4"
+        android:textSize="18dp"/>
+    <Button
+        android:id="@+id/picDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Chọn"
+        android:onClick="datePicker"/>
+</LinearLayout>
+    <Button
+        android:id="@+id/btnADDHoaDon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn"
+        android:onClick="ADDHoaDon"/>
+</LinearLayout>

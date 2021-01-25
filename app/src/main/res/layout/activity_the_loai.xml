@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+    tools:context=".activiti.TheLoaiActivity">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="352dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:text="THÊM THỂ LOẠI"
+
+        android:textColor="?attr/colorError"
+        android:textSize="24sp" />
+    <EditText
+        android:id="@+id/edMa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mã thể loại" />
+    <EditText
+        android:id="@+id/edTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên thể loại" />
+    <EditText
+        android:id="@+id/edVi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Vị trí" />
+
+    <EditText
+        android:id="@+id/edMo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mô tả" />
+
+    <LinearLayout
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnThem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="themtheloai"
+            android:text="Thêm" />
+
+        <Button
+            android:id="@+id/btnDanh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showtheloai"
+            android:text="Danh sách thể loại" />
+
+        <Button
+            android:id="@+id/btnHuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="quaylai"
+            android:text="Quay lại" />
+    </LinearLayout>
+
+</LinearLayout>

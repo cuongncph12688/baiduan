@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity android:name=".atvivit2.ThongKeDoanhThuActivity"></activity>
+        <activity android:name=".atvivit2.LuotSachBanChayActivity" />
+        <activity android:name=".atvivit2.ListHoaDonChiTietByIDActivity" />
+        <activity android:name=".atvivit2.HoaDonChiTietActivity" />
+        <activity android:name=".atvivit2.HoaDonActivity" />
+        <activity android:name=".atvivit2.ListHoaDonActivity" />
+        <activity android:name=".activiti.TheLoaiActivity" />
+        <activity android:name=".activiti.ListTheLoaiActivity" />
+        <activity android:name=".atvivit2.TheLoaiDetailActivity" />
+        <activity android:name=".atvivit2.ListBookActivity" />
+        <activity android:name=".atvivit2.ThemSachActivity" />
+        <activity android:name=".activiti.MainActivity" />
+        <activity android:name=".activiti.NguoiDungDetailActivity" />
+        <activity android:name=".activiti.NguoiDungActivity" />
+        <activity android:name=".activiti.ListNguoiDungActivity" />
+        <activity android:name=".activiti.ChangePasswordActivity" />
+        <activity android:name=".activiti.LoginActivity" />
+        <activity android:name=".activiti.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
