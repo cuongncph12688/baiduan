@@ -31,13 +31,18 @@ public class LuotSachBanChayActivity extends AppCompatActivity {
         edThang = (EditText) findViewById(R.id.edThang);
     }
     public void VIEW_SACH_TOP_10(View view){
-        if (Integer.parseInt(edThang.getText().toString())>13 ||
-                Integer.parseInt(edThang.getText().toString())<0){
-            Toast.makeText(getApplicationContext(),"Không đúng định dạng tháng (1- 12)",Toast.LENGTH_SHORT).show();
-        }else {
-            sachDAO = new SachDAO(LuotSachBanChayActivity.this);
-            dsSach = sachDAO.getSachTop10(edThang.getText().toString());adapter = new BookAdapter(this, dsSach);
-            lvBook.setAdapter(adapter);
-        }
+       try {
+           if (Integer.parseInt(edThang.getText().toString())>13 ||
+                   Integer.parseInt(edThang.getText().toString())<0){
+               Toast.makeText(getApplicationContext(),"Không đúng định dạng tháng (1- 12)",Toast.LENGTH_SHORT).show();
+           }else {
+               sachDAO = new SachDAO(LuotSachBanChayActivity.this);
+               dsSach = sachDAO.getSachTop10(edThang.getText().toString());adapter = new BookAdapter(this, dsSach);
+               lvBook.setAdapter(adapter);
+           }
+       } catch (NumberFormatException e) {
+           e.printStackTrace();
+           Toast.makeText(this, "mới bạn nhập số", Toast.LENGTH_SHORT).show();
+       }
     }
 }

@@ -44,14 +44,15 @@ public class ChangePasswordActivity extends AppCompatActivity {
         }
         return check;
     }
+
     public void changePassword(View view) {
-        SharedPreferences pref = getSharedPreferences("USER_FILE",MODE_PRIVATE);
-        String strUserName = pref.getString("USERNAME","");
+        SharedPreferences pref = getSharedPreferences("USER_FILE", MODE_PRIVATE);
+        String strUserName = pref.getString("USERNAME", "");
         nguoiDungDAO = new NguoiDungDAO(ChangePasswordActivity.this);
         NguoiDung user = new NguoiDung(strUserName, edPass.getText().toString(), "",
                 "");
-        try {
-            if (validateForm()>0){
+//        try {
+            if (validateForm() > 0) {
                 if (nguoiDungDAO.changePasswordNguoiDung(user) > 0) {
                     Toast.makeText(getApplicationContext(), "Lưu thành công",
                             Toast.LENGTH_SHORT).show();
@@ -61,8 +62,8 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 }
             }
             finish();
-        } catch (Exception ex) {
-            Log.e("Error", ex.toString());
-        }
+//        } catch (Exception ex) {
+//            Log.e("Error", ex.toString());
+//        }
     }
 }

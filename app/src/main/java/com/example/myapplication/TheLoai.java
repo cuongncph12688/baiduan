@@ -7,15 +7,14 @@ public class TheLoai {
     private int viTri;
     public TheLoai() {
     }
-    public TheLoai(String maTheLoai, String tenTheLoai, String moTa, int viTri) {
+    public TheLoai(String maTheLoai, String tenTheLoai, String moTa, Integer viTri) {
         this.maTheLoai = maTheLoai;
         this.tenTheLoai = tenTheLoai;
         this.moTa = moTa;
         this.viTri = viTri;
     }
 
-    public TheLoai(String maTheLoai, String tenTheLoai, String moTa, String toString) {
-    }
+
 
     public String getMaTheLoai() {
         return maTheLoai;

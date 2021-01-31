@@ -39,6 +39,7 @@ public class ListTheLoaiActivity extends AppCompatActivity {
         Log.e(""+dsTheLoai.size(),"s");
         adapter = new TheLoaiAdapter(this, dsTheLoai);
         lvTheLoai.setAdapter(adapter);
+        Log.e("", String.valueOf(dsTheLoai.size()));
         lvTheLoai.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
@@ -51,7 +52,7 @@ public class ListTheLoaiActivity extends AppCompatActivity {
                 b.putString("MOTA", dsTheLoai.get(position).getMoTa());
                 b.putString("VITRI",
                         String.valueOf(dsTheLoai.get(position).getViTri()));
-                Log.e("ra man hinh","ra man hinh");
+
                 intent.putExtras(b);
                 startActivity(intent);
             }

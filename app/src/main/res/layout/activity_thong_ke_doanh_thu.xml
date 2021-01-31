@@ -21,19 +21,19 @@
         android:id="@+id/tvThongKeNgay"
         android:textSize="26dp"
         android:textStyle="bold"
-        android:textColor="@color/design_default_color_on_primary"
+        android:textColor="@color/design_default_color_secondary"
         />
+
     <TextView
+        android:id="@+id/tvThongKeThang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="10dp"
-        android:text="Tháng ngày"
-        android:textSize="26dp"
-        android:textStyle="bold"
+        android:text="Tháng này"
         android:textColor="@color/design_default_color_primary"
-        android:id="@+id/tvThongKeThang"
-        />
+        android:textSize="26dp"
+        android:textStyle="bold" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

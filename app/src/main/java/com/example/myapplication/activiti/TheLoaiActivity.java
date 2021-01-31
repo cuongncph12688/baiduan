@@ -45,19 +45,19 @@ public class TheLoaiActivity extends AppCompatActivity {
 
     public void themtheloai(View view) {
         theloaiDAO = new TheLoaiDAO(TheLoaiActivity.this);
-        TheLoai user = new TheLoai(edMa.getText().toString(), edTen.getText().toString(), edMo.getText().toString(), edVi.getText().toString());
+        TheLoai user = new TheLoai(edMa.getText().toString(), edTen.getText().toString(), edMo.getText().toString(), Integer.parseInt(edVi.getText().toString()));
         try {
             if (validateForm() > 0) {
                 if (theloaiDAO.inserTheLoai(user) > 0) {
                     onBackPressed();
-                   Log.e("1","1");
+
                     Toast.makeText(getApplicationContext(), "Thêm thành công", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "Thêm thất bại", Toast.LENGTH_SHORT).show();
                 }
             }
         } catch (Exception ex) {
-            Log.e("Lỗi:", ex.toString());
+            Log.e("Error", ex.toString());
         }
     }
 

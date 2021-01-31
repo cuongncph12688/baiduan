@@ -68,7 +68,6 @@ public class NguoiDungAdapter extends BaseAdapter {
             holder.imgDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     nguoiDungDAO.deleteNguoiDungByID(arrNguoiDung.get(position).getUserName());
                     arrNguoiDung.remove(position);
                     notifyDataSetChanged();

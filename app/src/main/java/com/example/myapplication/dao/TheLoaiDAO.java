@@ -16,7 +16,7 @@ public class TheLoaiDAO {
     private SQLiteDatabase db;
     private DatabaseHelper dbHelper;
     public static final String TABLE_NAME = "TheLoai";
-    public static final String SQL_THE_LOAI ="CREATE TABLE TheLoai (matheloai textprimary key, tentheloai text, mota text, vitri int);";
+    public static final String SQL_THE_LOAI ="CREATE TABLE TheLoai (matheloai text primary key, tentheloai text, mota text, vitri int);";
     public static final String TAG = "TheLoaiDAO";
     public TheLoaiDAO(Context context) {
         dbHelper = new DatabaseHelper(context);
@@ -50,7 +50,6 @@ public class TheLoaiDAO {
             ee.setMoTa(c.getString(2));
             ee.setViTri(c.getInt(3));
             dsTheLoai.add(ee);
-            Log.d("//=====",ee.toString());
             c.moveToNext();
             Log.e("2","2");
         }

@@ -78,6 +78,7 @@ public class NguoiDungDAO {
                 String[]{nd.getUserName()});
         if (result == 0){
             return -1;
+
         }
         return 1;
     }
